@@ -23,6 +23,50 @@ namespace yzl_8436_kosullar
 
             Console.Read();*/
 
+            //ternary if
+            //----------------------------------------
+
+            //int yas = 0;
+            //Console.Write("Lütfen yaşınızı giriniz: ");
+            //yas = Convert.ToInt32(Console.ReadLine());
+
+            //string sonuc = yas >= 18 ? "Oy verebilirsiniz" : "Oy veremezsiniz";
+            ////sonuc = sonuc == null ? "Hatalı veri" : sonuc;
+
+            //Console.WriteLine(sonuc);
+
+            //------------------------------------------------
+
+            //int sayi = 0;
+            //Console.Write("Lütfen bir sayı girin: ");
+            //sayi = Convert.ToInt32(Console.ReadLine());
+
+            //int mutlakDeger = sayi < 0 ? (sayi * -1) : sayi;
+            //Console.WriteLine("Mutlak değeri: " + mutlakDeger);
+
+            //-----------------------------------------------------
+
+            /*Console.Write("Lütfen şifrenizi girin: ");
+            string sifre = Console.ReadLine();
+
+            if (sifre != null && sifre.Length > 8)
+                Console.WriteLine("Şifreniz 8 karakterden büyüktür");
+            else
+                Console.WriteLine("Doğru şifre girdiniz");*/
+
+
+            Console.Write("Lütfen şifrenizi girin: ");
+            string sifre = Console.ReadLine();
+
+            //12345678
+
+            sifre = sifre.Length > 6 ? sifre.Substring(0, 6) : sifre;
+
+            if(sifre == "123456")
+                Console.WriteLine("Başarıyla giriş yaptınız");
+            else
+                Console.WriteLine("Hatalı şifre");
+
             //kargo hesaplama
 
             //string ulke, paraBirimi = "USD";
@@ -185,49 +229,50 @@ namespace yzl_8436_kosullar
                 //KullaniciAdi = "bilgeadam";
                 //Sifre = "1234";
 
-                Console.Write("Kullanıcı adınızı giriniz: ");
-                var kullaniciAdi = Console.ReadLine();
+                //Console.Write("Kullanıcı adınızı giriniz: ");
+                //var kullaniciAdi = Console.ReadLine();
 
-                Console.Write("Şifrenizi giriniz: ");
-                string sifre = Console.ReadLine();
+                //Console.Write("Şifrenizi giriniz: ");
+                //string sifre = Console.ReadLine();
 
-                //yol 1
-                switch (kullaniciAdi)
-                {
-                    case "bilgeadam":
-                        switch(sifre)
-                        {
-                            case "1234":
-                                Console.WriteLine("Tebrikler, hem kullanıcı adı hem de şifreniz doğru!");
-                                break;
-                            default:
-                                Console.WriteLine("Kullanıcı adınız doğru ancak şifreniz yanlış!");
-                                break;
-                        }
-                        break;
-                    default:
-                        Console.WriteLine("Kullanıcı adınızı yanlış girdiniz, şifreye bakmadım bile!");
-                        break;
-                }
+                ////yol 1
+                //switch (kullaniciAdi)
+                //{
+                //    case "bilgeadam":
+                //        switch(sifre)
+                //        {
+                //            case "1234":
+                //                Console.WriteLine("Tebrikler, hem kullanıcı adı hem de şifreniz doğru!");
+                //                break;
+                //            default:
+                //                Console.WriteLine("Kullanıcı adınız doğru ancak şifreniz yanlış!");
+                //                break;
+                //        }
+                //        break;
+                //    default:
+                //        Console.WriteLine("Kullanıcı adınızı yanlış girdiniz, şifreye bakmadım bile!");
+                //        break;
+                //}
 
-                //yol 2
-                if(kullaniciAdi == "bilgeadam")
-                {
-                    if(sifre == "1234")
-                        Console.WriteLine("Tebrikler, hem kullanıcı adı hem de şifreniz doğru!");
-                    else
-                        Console.WriteLine("Kullanıcı adınız doğru ancak şifreniz yanlış!");
-                }
-                else
-                    Console.WriteLine("Kullanıcı adınızı yanlış girdiniz, şifreye bakmadım bile!");
+                ////yol 2
+                //if(kullaniciAdi == "bilgeadam")
+                //{
+                //    if(sifre == "1234")
+                //        Console.WriteLine("Tebrikler, hem kullanıcı adı hem de şifreniz doğru!");
+                //    else
+                //        Console.WriteLine("Kullanıcı adınız doğru ancak şifreniz yanlış!");
+                //}
+                //else
+                //    Console.WriteLine("Kullanıcı adınızı yanlış girdiniz, şifreye bakmadım bile!");
 
-                //yol 3
-                if (kullaniciAdi == "bilgeadam" && sifre == "1234")
-                    Console.WriteLine("Tebrikler, hem kullanıcı adı hem de şifreniz doğru!");
-                else if (kullaniciAdi == "bilgeadam")
-                    Console.WriteLine("Kullanıcı adınız doğru ancak şifreniz yanlış!");
-                else
-                    Console.WriteLine("Kullanıcı adınızı yanlış girdiniz, şifreye bakmadım bile!");
+                ////yol 3
+                //if (kullaniciAdi == "bilgeadam" && sifre == "1234")
+                //    Console.WriteLine("Tebrikler, hem kullanıcı adı hem de şifreniz doğru!");
+                //else if (kullaniciAdi == "bilgeadam")
+                //    Console.WriteLine("Kullanıcı adınız doğru ancak şifreniz yanlış!");
+                //else
+                //    Console.WriteLine("Kullanıcı adınızı yanlış girdiniz, şifreye bakmadım bile!");
+
             }
             catch (Exception ex)
             {
